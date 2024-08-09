@@ -64,7 +64,7 @@ header div.container {justify-content: space-between !important; align-items:0}
     padding: 10px;
     background-color: #ffffff;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.15);
-    transition: 1ms;
+    transition: 0.8ms;
 }
 
 nav {flex: 0 1 400px;}
