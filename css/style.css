@@ -160,14 +160,19 @@ footer {
     box-shadow: 15px 15px 15px 0px rgba(17, 129, 204, 0.2);
 }
 
-h1.nome::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 5px;
-    background-color: #669ce4;
-    margin: 8px 0 20px 0;
+.title {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
 }
+
+.nome {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    
+}
+
 
 .foto {
     width: 300px;
@@ -193,10 +198,18 @@ p.paragrafo + p.paragrafo {margin: 20px 0;}
 .Socials {
     width: 90%;
     padding: 20px;
-    background-image: url(/img/socials.jpg);
     margin: 180px auto;
     border-radius: 50px;
     box-shadow: 15px 15px 15px 0px rgba(0, 0, 0, 0.1); 
+}
+
+.title2 {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 50px;
+    color: #000000;
+    
+    
 }
 
 .Socials ul {
@@ -223,7 +236,7 @@ p.paragrafo + p.paragrafo {margin: 20px 0;}
 }
 
 .Socials ul li a:hover {
-    background-color: #ffffff;
+    background-color: #669ce4;
     color: #000000;
 }
 
