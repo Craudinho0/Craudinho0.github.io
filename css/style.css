@@ -146,16 +146,21 @@
     flex-wrap: wrap;
 }
 
-.socials ul li a img {
+.socials ul li a img, .dicord-xs {
     width: 35px;
     text-align: center;
     transition: .2s;
 }
 
-.socials ul li a img:hover {
+.dicord-xs {
+    cursor: pointer;
+}
+
+.socials ul li a img:hover, .dicord-xs:hover {
     transform: scale(1.2);
     filter: drop-shadow(1px 2px 1px #5d5d5d);
 }
+
 
 .socials ul li a img:active {
     translate: 0 0.225em;
