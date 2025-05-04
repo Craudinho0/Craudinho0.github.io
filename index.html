@@ -8,17 +8,16 @@
   <title>Andrezinho - social media links</title>
   <link rel="icon" type="image/png" href="img/icon.png">
 
-  <!--Meu Estilo-->
+  <!--My style-->
   <link rel="stylesheet" href="/css/style.css">
+  <script type="text/javascript" src="/java/vanilla-tilt.js"></script>
 
   <!--Font Awesome-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-
 </head>
 
 <body>
-
   <!--Snoflakes-->
   <div class="snowflakes" aria-hidden="true">
     <div class="snowflake">
@@ -59,65 +58,134 @@
     </div>
   </div>
 
+  <!--Background-->
+  <div class="background">
+    <video autoplay muted loop>
+      <source src="/movie/capa1.mp4" type="video/mp4">
+    </video>
+  </div>
+
   <main>
 
-    <section class="posts postsstyle">
+    <div class="container">
+      <div class="card-style">
+        <div class="profile-style"><img class="avatar" src="/img/avatar.jpg" alt="profile picture">
+          <span class="style-name">
+            ANDREZINHO
+          </span>
 
-      <div class="post"><img src="/img/boneco.jpg" alt="foto de perfil">
-        <h2>ANDREZINHO</h2>
-        <p>André "Andrezinho", 20, developer</p>
+          <div class="flip-container">
+            <div class="card">
+              <div class="front">
+                <button class="flip-button">▶</button>
+                <span class="tooltip content" data-tooltip="Css 3"><img src="/svg/css3.svg" alt="Icon Css3"></span>
+                <span class="tooltip content" data-tooltip="Html 5"><img src="/svg/html.svg" alt="Icon Html"></span>
+                <span class="tooltip content" data-tooltip="Java Script"><img src="/svg/javascript.svg"
+                    alt="Icon Java"></span>
+                <span class="tooltip content" data-tooltip="Node.js"><img src="/svg/nodejs.svg"
+                    alt="Icon NodeJs"></span>
+                <span class="tooltip content" data-tooltip="Python"><img src="/svg/python.svg" alt="Icon Python"></span>
+              </div>
+              <div class="verse">
+                <button class="back-button">◀</button>
+                <span class="tooltip content" data-tooltip="Lua"><img src="/svg/lua.svg" alt="Icon .Lua"></span>
+                <span class="tooltip content" data-tooltip="TypeScript"><img src="/svg/typescript.svg"
+                    alt="Icon TypeScript"></span>
+                <span class="tooltip content" data-tooltip="Sql"><img src="/img/sql.png" alt="Icon Sql"></span>
+                <span class="tooltip content" data-tooltip="Java"><img src="/svg/java.svg" alt="Icon Java"></span>
+                <span class="tooltip content" data-tooltip="Php"><img src="/svg/php.svg" alt="Icon Php"></span>
+              </div>
+            </div>
+          </div>
+          <p class="typing-text">André "Andrezinho", 20, <span></span></p>
+        </div>
 
-        <article class="Socials">
+        <div class="socials">
           <ul>
             <li>
               <a href="https://steamcommunity.com/profiles/76561199131061482/" target="_blank">
-                <span class="fab fa-steam"></span>
+                <img src="/svg/steam.svg" alt="Icon Steam">
               </a>
             </li>
             <li>
               <a href="https://github.com/Andrezinhoo0" target="_blank">
-                <span class="fab fa-github"></span>
+                <img src="/svg/github.svg" alt="Icon GitHub">
               </a>
             </li>
             </li>
             <li>
               <a href="https://www.instagram.com/andrezinho_diiackers" target="_blank">
-                <span class="fab fa-instagram"></span>
+                <img src="/svg/instagram.svg" alt="Icon Instragram">
               </a>
             </li>
             <li>
-              <a href="https://discord.gg/deF7HHmPKc" target="_blank">
-                <span class="fab fa-discord"></span>
+              <a href="#" onclick="copyText('.andrezinho0')">
+                <img src="/svg/discord.svg" alt="icon discord">
+                <div id="alert" class="alert" style="display: none;">Copied!</div>
               </a>
             </li>
             <li>
               <a href="https://www.twitch.tv/andrwezinho" target="_blank">
-                <span class="fab fa-twitch"></span>
+                <img src="/svg/twitch.svg" alt="Icon twitch">
               </a>
             </li>
             <li>
               <a href="https://www.youtube.com/channel/UCdxLBi2oGlPSGQNw6E6ffrg" target="_blank">
-                <span class="fab fa-youtube"></span>
+                <img src="/svg/youtube.svg" alt="Icon YouTube">
               </a>
             </li>
             <li>
               <a href="https://open.spotify.com/user/21oflof5jri3ruia4oarskdby?si=f234a94848b54d69" target="_blank">
-                <span class="fab fa-spotify"></span>
+                <img src="/svg/spotify.svg" alt="Icon Spotify">
               </a>
             </li>
           </ul>
-        </article>   
+        </div>
       </div>
-    </section>
+    </div>
 
   </main>
 
-  <script type="text/javascript" src="vanilla-tilt.js"></script>
   <script>
-    VanillaTilt.init(document.querySelector(".posts"), {
-      max: 25,
-      speed: 400,
+    VanillaTilt.init(document.querySelector(".card-style"), {
+      max: 20,
+      speed: 1000,
+      reverse: true,
+      perspective: 2000,
+      easing: "cubic-bezier(0.0, 0, 0.2, 1)",
     });
+  </script>
+
+  <script>
+    const flipContainer = document.querySelector('.flip-container');
+    const flipButton = document.querySelector('.flip-button');
+
+    flipButton.addEventListener('click', () => {
+      flipContainer.classList.toggle('flip');
+    });
+  </script>
+
+  <script>
+    const verso = document.querySelector('.verso');
+    const backbutton = document.querySelector('.back-button');
+
+    backbutton.addEventListener('click', () => {
+      flipContainer.classList.toggle('flip');
+    });
+  </script>
+  <!--Copy and paste -->
+  <Script>
+    function copyText(text) {
+      navigator.clipboard.writeText(text)
+        .then(() => {
+
+          document.getElementById("alert").style.display = "block";
+          setTimeout(() => {
+            document.getElementById("alert").style.display = "none";
+          }, 2000);
+        })
+
+    }
   </script>
 
 </body>
