@@ -161,8 +161,7 @@
     filter: drop-shadow(1px 2px 1px #5d5d5d);
 }
 
-
-.socials ul li a img:active {
+.socials ul li a img, .dicord-xs:active {
     translate: 0 0.225em;
 }
 
