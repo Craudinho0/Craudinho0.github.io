@@ -25,10 +25,6 @@
     height: 100%;
 }
 
-.profile-style {
-    padding-top: 40px;
-}
-
 .avatar {
     border-radius: 50%;
     width: 120px;
@@ -58,7 +54,7 @@
     }
 }
 
-.profile-style p {
+.typing-text {
     color: white;
     margin-top: 15px;
     font-family: "Poppins", sans-serif;
@@ -78,10 +74,12 @@
     margin: auto;
     width: 490px;
     height: 430px;
+    padding-top: 40px;
     border-radius: 10px;
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    background: rgba(0, 0, 0, 0.185);
+    background: transparent; 
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 10px rgb(93, 93, 93),
         0 0 10px rgb(93, 93, 93, 1),
         0 0 20px rgb(93, 93, 93, 1),
@@ -149,7 +147,7 @@
 .socials ul li a img, .dicord-xs {
     width: 35px;
     text-align: center;
-    transition: .2s;
+    transition: translate 0.1s, tranform 0.1s, filter 0.1s;
 }
 
 .dicord-xs {
@@ -161,7 +159,7 @@
     filter: drop-shadow(1px 2px 1px #5d5d5d);
 }
 
-.socials ul li a img, .dicord-xs:active {
+.socials ul li a img:active, .dicord-xs:active {
     translate: 0 0.225em;
 }
 
@@ -172,14 +170,15 @@
     font-size: 12px;
     font-family: "Poppins", sans-serif;
     transform: translateX(-50%);
-    background-color: #5d5d5d;
+    background-color: #000;
     color: #fff;
     padding: 5px;
     border-radius: 5px;
     z-index: 1000;
 }
 
-.flip-container {
+
+.front-container {
     perspective: 1000px;
 }
 
@@ -212,7 +211,7 @@
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    transition: transform 0.5s;
+    transition: transform 0.5s ease, filter 0.5 ease;
 }
 
 .card .front {
@@ -223,15 +222,15 @@
     transform: rotateY(180deg);
 }
 
-.flip-container.flip .card .front {
+.front-container.front .card .front {
     transform: rotateY(180deg);
 }
 
-.flip-container.flip .card .verse {
+.front-container.front .card .verse {
     transform: rotateY(0deg);
 }
 
-.flip-button {
+.front-button {
     position: absolute;
     font-weight: 600;
     padding: 5px 0 10px 0;
@@ -256,7 +255,7 @@
 }
 
 .back-button:hover,
-.flip-button:hover {
+.front-button:hover {
     transform: scale(1.06);
     opacity: 1;
 }
@@ -302,7 +301,6 @@
     visibility: visible;
     opacity: 1;
 }
-
 
 .tooltip:hover::before {
     visibility: visible;
@@ -459,3 +457,5 @@
     left: 65%;
     animation-delay: 2.5s
 }
+
+
