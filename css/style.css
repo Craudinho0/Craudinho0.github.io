@@ -194,8 +194,7 @@
     border-radius: 7px;
 }
 
-.verse img,
-.front img {
+.card img {
     width: 22px;
     justify-content: space-around;
 }
