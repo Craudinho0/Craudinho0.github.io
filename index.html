@@ -147,7 +147,7 @@
     .then(data => {
       console.log("Visitas:", data.visits); // Mostra no console
       // Opcional: mostrar o número de visitas na tela
-      // document.getElementById('visit-count').innerText = `Visitas: ${data.visits}`;
+      document.getElementById('visit-count').innerText = `Visitas: ${data.visits}`;
     })
     .catch(error => console.error('Erro ao contar visita:', error));
 </script>
