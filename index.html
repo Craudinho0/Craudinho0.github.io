@@ -1,198 +1,156 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="All my social media links">
-  <title>Andrezinho - social media links</title>
-  <link rel="icon" type="image/png" href="img/icone1.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Connect with Andrezinho through his social media and developer portfolio." />
+  <meta name="author" content="Andrezinho" />
+  <meta name="keywords" content="Andrezinho, social media, developer, portfolio" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Andrezinho - Social Media Links" />
+  <meta property="og:description" content="Connect with Andrezinho through major social platforms." />
+  <meta property="og:image" content="/img/avatar.jpg" />
+  <meta property="og:type" content="website" />
 
-  <!--My style-->
-  <link rel="stylesheet" href="/css/style.css">
-  <script type="text/javascript" src="/java/vanilla-tilt.js"></script>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
 
-  <script crossorigin="anonymous" src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
-  <script src="/java/biography.js"></script>
+  <title>Andrezinho - Social Media Links</title>
 
-  <!--Font Awesome-->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/img/icone1.png" />
+
+  <!-- Preload external scripts for performance -->
+  <link rel="preload" href="/js/vanilla-tilt.js" as="script">
+  <link rel="preload" href="https://unpkg.com/typeit@8.7.1/dist/index.umd.js" as="script" crossorigin="anonymous" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/css/style.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" crossorigin="anonymous" />
+
+  <!-- JavaScript Files -->
+  <script src="/js/vanilla-tilt.js" defer></script>
+  <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js" crossorigin="anonymous" defer></script>
+  <script src="/js/interactions.min.js" defer></script>
 </head>
 
 <body>
-  <!--Snoflakes-->
+  <!-- Animated snowflake effect -->
   <div class="snowflakes" aria-hidden="true">
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
+    <div class="snowflake"><div class="inner">❅</div></div>
+    <div class="snowflake"><div class="inner">❅</div></div>
+    <div class="snowflake"><div class="inner">❅</div></div>
+    <div class="snowflake"><div class="inner">❅</div></div>
+    <div class="snowflake"><div class="inner">❅</div></div>
+    <div class="snowflake"><div class="inner">❅</div></div>
   </div>
 
-  <!-- Background-->
+  <!-- Background video section -->
   <div class="background">
-    <video autoplay muted loop>
-      <source src="/movie/capa5.mp4" type="video/mp4">
+    <video autoplay muted loop id="video-background" playsinline>
+      <source src="/movie/capa5.mp4" type="video/mp4" />
     </video>
 
-    <main>
+    <main role="main">
+      <!-- Social profile section -->
+      <section aria-labelledby="profile-title">
+        <h1 id="profile-title" class="visually-hidden">Andrezinho's Social Profile</h1>
 
-      <div class="card-style">
-        <img class="avatar" src="/img/avatar.jpg" alt="profile picture">
-        <div class="name-style"><span class="style-name">ANDREZINHO</span></div>
+        <div class="card-style">
+          <!-- Profile picture -->
+          <img class="avatar" src="/img/avatar.jpg" alt="Andrezinho's profile picture" />
 
-        <div class="card style-card">
-          <div class="front">
-            <button class="front-button">▶</button>
-            <span class="tooltip content" data-tooltip="Html 5"><img src="/svg/html.svg" alt="Icon Html"
-                id="img-html"></span>
-            <span class="tooltip content" data-tooltip="Css 3"><img src="/svg/css3.svg" alt="Icon Css3"
-                id="img-css"></span>
-            <span class="tooltip content" data-tooltip="Java Script"><img src="/svg/javascript.svg" alt="Icon Java"
-                id="img-jvsc"></span>
-            <span class="tooltip content" data-tooltip="Node.js"><img src="/svg/nodejs.svg" alt="Icon NodeJs"
-                id="img-node"></span>
-            <span class="tooltip content" data-tooltip="Python"><img src="/svg/python.svg" alt="Icon Python"
-                id="img-python"></span>
+          <!-- Display name -->
+          <div class="name-style">
+            <span class="style-name">ANDREZINHO</span>
           </div>
-          <div class="verse">
-            <button class="back-button">◀</button>
-            <span class="tooltip content" data-tooltip=".Lua"><img src="/svg/lua.svg" alt="Icon .Lua"
-                id="img-lua"></span>
-            <span class="tooltip content" data-tooltip="TypeScript"><img src="/svg/typescript.svg" alt="Icon TypeScript"
-                id="img-typesc"></span>
-            <span class="tooltip content" data-tooltip="Sql"><img src="/img/sql.png" alt="Icon Sql" id="img-sql"></span>
-            <span class="tooltip content" data-tooltip="Java"><img src="/svg/java.svg" alt="Icon Java"
-                id="img-java"></span>
-            <span class="tooltip content" data-tooltip="Php"><img src="/svg/php.svg" alt="Icon Php" id="img-php"></span>
+
+          <!-- Interactive skill card (flippable) -->
+          <div class="card style-card">
+            <!-- Front side with some tech icons -->
+            <div class="front">
+              <button class="front-button" aria-label="Flip to back">▶</button>
+              <span class="tooltip content" data-tooltip="HTML 5">
+                <img src="/svg/html.svg" alt="HTML 5 Icon" id="img-html" />
+              </span>
+              <span class="tooltip content" data-tooltip="CSS 3">
+                <img src="/svg/css3.svg" alt="CSS 3 Icon" id="img-css" />
+              </span>
+              <span class="tooltip content" data-tooltip="JavaScript">
+                <img src="/svg/javascript.svg" alt="JavaScript Icon" id="img-jvsc" />
+              </span>
+              <span class="tooltip content" data-tooltip="Node.js">
+                <img src="/svg/nodejs.svg" alt="Node.js Icon" id="img-node" />
+              </span>
+              <span class="tooltip content" data-tooltip="Python">
+                <img src="/svg/python.svg" alt="Python Icon" id="img-python" />
+              </span>
+            </div>
+
+            <!-- Back side with more tech icons -->
+            <div class="verse">
+              <button class="back-button" aria-label="Flip to front">◀</button>
+              <span class="tooltip content" data-tooltip="Lua">
+                <img src="/svg/lua.svg" alt="Lua Icon" id="img-lua" />
+              </span>
+              <span class="tooltip content" data-tooltip="TypeScript">
+                <img src="/svg/typescript.svg" alt="TypeScript Icon" id="img-typesc" />
+              </span>
+              <span class="tooltip content" data-tooltip="SQL">
+                <img src="/img/sql.png" alt="SQL Icon" id="img-sql" />
+              </span>
+              <span class="tooltip content" data-tooltip="Java">
+                <img src="/svg/java.svg" alt="Java Icon" id="img-java" />
+              </span>
+              <span class="tooltip content" data-tooltip="PHP">
+                <img src="/svg/php.svg" alt="PHP Icon" id="img-php" />
+              </span>
+            </div>
+          </div>
+
+          <!-- Typing effect bio -->
+          <div class="biography">
+            <div class="animated-text">
+              André "Andrezinho", 20, <span class="services-bio"></span>
+            </div>
+          </div>
+
+          <!-- Social media links -->
+          <div class="socials">
+            <ul>
+              <li><a href="https://steamcommunity.com/profiles/76561199131061482/" target="_blank"><img src="/svg/steam.svg" alt="Steam Icon" /></a></li>
+              <li><a href="https://github.com/Andrezinhoo0" target="_blank"><img src="/svg/github.svg" alt="GitHub Icon" /></a></li>
+              <li><a href="https://www.instagram.com/andrezinho_diiackers" target="_blank"><img src="/svg/instagram.svg" alt="Instagram Icon" /></a></li>
+              <li>
+                <img src="/svg/discord.svg" alt="Discord Icon" onclick="copyText('.andrezinho0')" class="dicord-animation" />
+                <div id="alert" class="alert" style="display: none;">Copied!</div>
+              </li>
+              <li><a href="https://www.twitch.tv/andrwezinho" target="_blank"><img src="/svg/twitch.svg" alt="Twitch Icon" /></a></li>
+              <li><a href="https://www.youtube.com/channel/UCdxLBi2oGlPSGQNw6E6ffrg" target="_blank"><img src="/svg/youtube.svg" alt="YouTube Icon" /></a></li>
+              <li><a href="https://open.spotify.com/user/21oflof5jri3ruia4oarskdby?si=f234a94848b54d69" target="_blank"><img src="/svg/spotify.svg" alt="Spotify Icon" /></a></li>
+            </ul>
           </div>
         </div>
-
-        <div class="biography">
-          <div class="animated-text">
-            André "Andrezinho", 20, &nbsp;<span class="services-bio"></span>
-          </div>
-        </div>
-
-        <div class="socials">
-          <ul>
-            <li>
-              <a href="https://steamcommunity.com/profiles/76561199131061482/" target="_blank">
-                <img src="/svg/steam.svg" alt="Icon Steam">
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/Andrezinhoo0" target="_blank">
-                <img src="/svg/github.svg" alt="Icon GitHub">
-              </a>
-            </li>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/andrezinho_diiackers" target="_blank">
-                <img src="/svg/instagram.svg" alt="Icon Instragram">
-              </a>
-            </li>
-            <li>
-              <img src="/svg/discord.svg" alt="icon discord" onclick="copyText('.andrezinho0')"
-                class="dicord-animation">
-              <div id="alert" class="alert" style="display: none;">Copied!</div>
-            </li>
-            <li>
-              <a href="https://www.twitch.tv/andrwezinho" target="_blank">
-                <img src="/svg/twitch.svg" alt="Icon twitch">
-              </a>
-            </li>
-            <li>
-              <a href="https://www.youtube.com/channel/UCdxLBi2oGlPSGQNw6E6ffrg" target="_blank">
-                <img src="/svg/youtube.svg" alt="Icon YouTube">
-              </a>
-            </li>
-            <li>
-              <a href="https://open.spotify.com/user/21oflof5jri3ruia4oarskdby?si=f234a94848b54d69" target="_blank">
-                <img src="/svg/spotify.svg" alt="Icon Spotify">
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      </section>
+    </main>
   </div>
 
 
-  </main>
-
   <script>
-    VanillaTilt.init(document.querySelector(".card-style"), {
-      max: 20,
-      speed: 1000,
-      reverse: true,
-      perspective: 2000,
-      easing: "cubic-bezier(0.0, 0, 0.2, 1)",
-    });
-  </script>
-
-  <script>
-    const card = document.querySelector('.card');
-    const frontButton = document.querySelector('.front-button');
-
-    frontButton.addEventListener('click', () => {
-      card.classList.toggle('front');
-    });
-  </script>
-
-  <script>
-    const verse = document.querySelector('.verse');
-    const backbutton = document.querySelector('.back-button');
-
-    backbutton.addEventListener('click', () => {
-      card.classList.toggle('front');
-    });
-  </script>
-
-  <!--Copy and paste -->
-  <Script>
-    function copyText(text) {
-      navigator.clipboard.writeText(text)
-        .then(() => {
-
-          document.getElementById("alert").style.display = "block";
-          setTimeout(() => {
-            document.getElementById("alert").style.display = "none";
-          }, 2000);
-        })
-    }
-  </script>
+  // Faz uma requisição GET ao contador de visitas
+  fetch('https://visit-counter-bn3mvkmqe-andrezinhos-projects.vercel.app/api/count')
+    .then(response => response.json())
+    .then(data => {
+      console.log("Visitas:", data.visits); // Mostra no console
+      // Opcional: mostrar o número de visitas na tela
+      // document.getElementById('visit-count').innerText = `Visitas: ${data.visits}`;
+    })
+    .catch(error => console.error('Erro ao contar visita:', error));
+</script>
 
 </body>
 

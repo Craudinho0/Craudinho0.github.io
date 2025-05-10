@@ -71,11 +71,8 @@ body {
     border-radius: 10px;
     background: rgba(0, 0, 0, 0.075); 
     backdrop-filter: blur(3px); 
-    -webkit-backdrop-filter: blur(3px);
-    box-shadow: 0 0 10px rgb(93, 93, 93),
-        0 0 10px rgba(93, 93, 93, 0.568),
-        0 0 20px rgba(93, 93, 93, 0.568),
-        0 0 40px rgba(93, 93, 93, 0.568);
+    -webkit-backdrop-filter: blur(3px); 
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.2);
 }
 
 .name-style{
@@ -157,7 +154,6 @@ body {
     justify-content: center;
     border-radius: 7px;
     background: rgba(0, 0, 0, 0.801);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 1);
 }
 
 .card img {
@@ -468,26 +464,116 @@ body {
     animation-delay: 2.5s
 }
 
-/* rgba(0, 0, 0, 0.5) */
 
-.container {
-  display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-  position: relative; /* Necessário para posicionamento de elementos filhos absolutos */
-  width: 200px; /* Defina uma largura para o contêiner */
-  height: 150px; /* Defina uma altura para o contêiner */
+/* Small screens (phones up to 480px) */
+@media (max-width: 480px) {
+    /* Make card flexible and fit small screens */
+    .card-style {
+        width: 90%;
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    /* Reduce avatar size for phones */
+    .avatar {
+        width: 80px;
+        margin: 10px;
+    }
+
+    /* Adjust name font size */
+    .style-name {
+        font-size: 20px;
+    }
+
+    /* Adjust biography text for smaller screens */
+    .biography {
+        font-size: 14px;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    /* Reduce spacing in social icons list */
+    .socials ul {
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    /* Resize social icons */
+    .socials ul li a img, .dicord-animation {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Resize skill cards */
+    .card {
+        width: 60%;
+        height: 30px;
+    }
+
+    /* Resize images inside cards */
+    .card img {
+        width: 18px;
+    }
 }
 
-.overlay {
-  /* Estilos para o elemento que será posicionado */
-  /* Sem position: absolute, pois será posicionado pelo flexbox */
-  background-color: rgba(0, 0, 0, 0.5); /* Exemplo: fundo cinza translúcido */
-  padding: 10px;
-  color: white;
+/* Medium screens (tablets between 481px and 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    /* Slightly larger card for tablets */
+    .card-style {
+        width: 80%;
+        height: auto;
+        padding: 30px 15px;
+    }
+
+    /* Slightly larger avatar */
+    .avatar {
+        width: 90px;
+    }
+
+    /* Medium font size for name */
+    .style-name {
+        font-size: 22px;
+    }
+
+    /* Medium font size for biography */
+    .biography {
+        font-size: 15px;
+    }
+
+    /* Medium size for skill cards */
+    .card {
+        width: 45%;
+    }
+
+    .card img {
+        width: 20px;
+    }
 }
 
-.image {
-    border: 1px solid #000;
-    border-radius: 50%;
+/* Large screens (desktops ≥ 1200px) */
+@media (min-width: 1200px) {
+    /* Expand card size on large displays */
+    .card-style {
+        width: 500px;
+        height: 450px;
+    }
+
+    /* Increase avatar size */
+    .avatar {
+        width: 110px;
+    }
+
+    /* Larger font for name */
+    .style-name {
+        font-size: 26px;
+    }
+
+    /* Slightly larger cards and icons */
+    .card {
+        width: 30%;
+    }
+
+    .card img {
+        width: 24px;
+    }
 }
