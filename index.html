@@ -139,17 +139,13 @@
     </main>
   </div>
 
-
-  <script>
-  // Faz uma requisição GET ao contador de visitas
-  fetch('https://visit-counter-bn3mvkmqe-andrezinhos-projects.vercel.app/api/count')
-    .then(response => response.json())
-    .then(data => {
-      console.log("Visitas:", data.visits); // Mostra no console
-      // Opcional: mostrar o número de visitas na tela
-      document.getElementById('visit-count').innerText = `Visitas: ${data.visits}`;
-    })
-    .catch(error => console.error('Erro ao contar visita:', error));
+ <script>
+fetch("https://visit-counter-bn3mvkmqe-andrezinhos-projects.vercel.app/api/count")
+  .then(res => res.json())
+  .then(data => {
+    console.log(`Visitas: ${data.visits}`);
+  })
+  .catch(err => console.error("Erro ao contar visita:", err));
 </script>
 
 </body>
