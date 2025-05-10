@@ -138,22 +138,6 @@
       </section>
     </main>
   </div>
-
-
-<script>
-fetch("https://visit-counter-bn3mvkmqe-andrezinhos-projects.vercel.app/api/count")
-  .then(res => res.json())
-  .then(data => {
-    console.log(`Visitas: ${data.visits}`);
-
-    // Se quiser exibir na página, descomente as linhas abaixo
-    // const el = document.getElementById("visit-counter");
-    // if (el) el.innerText = `Total de visitas: ${data.visits}`;
-  })
-  .catch(err => console.error("Erro ao contar visita:", err));
-</script>
-
-
 </body>
 
 </html>
