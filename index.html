@@ -64,32 +64,38 @@
   <!-- Background-->
   <div class="background">
     <video autoplay muted loop>
-      <source src="/movie/capa1.mp4" type="video/mp4">
+      <source src="/movie/capa5.mp4" type="video/mp4">
     </video>
 
     <main>
 
-
-
       <div class="card-style">
-        <img class="avatar" src="/img/avatar.jpg" alt="profile picture">     
-          <div class="name-style"><span class="style-name">ANDREZINHO</span></div>
+        <img class="avatar" src="/img/avatar.jpg" alt="profile picture">
+        <div class="name-style"><span class="style-name">ANDREZINHO</span></div>
 
         <div class="card style-card">
           <div class="front">
             <button class="front-button">▶</button>
-            <span class="tooltip content" data-tooltip="Html 5"><img src="/svg/html.svg" alt="Icon Html" id="img-html"></span>
-            <span class="tooltip content" data-tooltip="Css 3"><img src="/svg/css3.svg" alt="Icon Css3"id="img-css"></span>
-            <span class="tooltip content" data-tooltip="Java Script"><img src="/svg/javascript.svg" alt="Icon Java"id="img-jvsc"></span>
-            <span class="tooltip content" data-tooltip="Node.js"><img src="/svg/nodejs.svg" alt="Icon NodeJs"id="img-node"></span>
-            <span class="tooltip content" data-tooltip="Python"><img src="/svg/python.svg" alt="Icon Python"id="img-python"></span>
+            <span class="tooltip content" data-tooltip="Html 5"><img src="/svg/html.svg" alt="Icon Html"
+                id="img-html"></span>
+            <span class="tooltip content" data-tooltip="Css 3"><img src="/svg/css3.svg" alt="Icon Css3"
+                id="img-css"></span>
+            <span class="tooltip content" data-tooltip="Java Script"><img src="/svg/javascript.svg" alt="Icon Java"
+                id="img-jvsc"></span>
+            <span class="tooltip content" data-tooltip="Node.js"><img src="/svg/nodejs.svg" alt="Icon NodeJs"
+                id="img-node"></span>
+            <span class="tooltip content" data-tooltip="Python"><img src="/svg/python.svg" alt="Icon Python"
+                id="img-python"></span>
           </div>
           <div class="verse">
             <button class="back-button">◀</button>
-            <span class="tooltip content" data-tooltip=".Lua"><img src="/svg/lua.svg" alt="Icon .Lua"id="img-lua"></span>
-            <span class="tooltip content" data-tooltip="TypeScript"><img src="/svg/typescript.svg" alt="Icon TypeScript"id="img-typesc"></span>
+            <span class="tooltip content" data-tooltip=".Lua"><img src="/svg/lua.svg" alt="Icon .Lua"
+                id="img-lua"></span>
+            <span class="tooltip content" data-tooltip="TypeScript"><img src="/svg/typescript.svg" alt="Icon TypeScript"
+                id="img-typesc"></span>
             <span class="tooltip content" data-tooltip="Sql"><img src="/img/sql.png" alt="Icon Sql" id="img-sql"></span>
-            <span class="tooltip content" data-tooltip="Java"><img src="/svg/java.svg" alt="Icon Java"id="img-java"></span>
+            <span class="tooltip content" data-tooltip="Java"><img src="/svg/java.svg" alt="Icon Java"
+                id="img-java"></span>
             <span class="tooltip content" data-tooltip="Php"><img src="/svg/php.svg" alt="Icon Php" id="img-php"></span>
           </div>
         </div>
@@ -119,7 +125,8 @@
               </a>
             </li>
             <li>
-              <img src="/svg/discord.svg" alt="icon discord" onclick="copyText('.andrezinho0')" class="dicord-animation">
+              <img src="/svg/discord.svg" alt="icon discord" onclick="copyText('.andrezinho0')"
+                class="dicord-animation">
               <div id="alert" class="alert" style="display: none;">Copied!</div>
             </li>
             <li>
@@ -142,48 +149,50 @@
       </div>
   </div>
 
+
   </main>
-<script>
-  VanillaTilt.init(document.querySelector(".card-style"), {
-    max: 20,
-    speed: 1000,
-    reverse: true,
-    perspective: 2000,
-    easing: "cubic-bezier(0.0, 0, 0.2, 1)",
-  });
-</script>
 
-<script>
-  const card = document.querySelector('.card');
-  const frontButton = document.querySelector('.front-button');
+  <script>
+    VanillaTilt.init(document.querySelector(".card-style"), {
+      max: 20,
+      speed: 1000,
+      reverse: true,
+      perspective: 2000,
+      easing: "cubic-bezier(0.0, 0, 0.2, 1)",
+    });
+  </script>
 
-  frontButton.addEventListener('click', () => {
-    card.classList.toggle('front');
-  });
-</script>
+  <script>
+    const card = document.querySelector('.card');
+    const frontButton = document.querySelector('.front-button');
 
-<script>
-  const verse = document.querySelector('.verse');
-  const backbutton = document.querySelector('.back-button');
+    frontButton.addEventListener('click', () => {
+      card.classList.toggle('front');
+    });
+  </script>
 
-  backbutton.addEventListener('click', () => {
-    card.classList.toggle('front');
-  });
-</script>
+  <script>
+    const verse = document.querySelector('.verse');
+    const backbutton = document.querySelector('.back-button');
 
-<!--Copy and paste -->
-<Script>
-  function copyText(text) {
-    navigator.clipboard.writeText(text)
-      .then(() => {
+    backbutton.addEventListener('click', () => {
+      card.classList.toggle('front');
+    });
+  </script>
 
-        document.getElementById("alert").style.display = "block";
-        setTimeout(() => {
-          document.getElementById("alert").style.display = "none";
-        }, 2000);
-      })
-  }
-</script>
+  <!--Copy and paste -->
+  <Script>
+    function copyText(text) {
+      navigator.clipboard.writeText(text)
+        .then(() => {
+
+          document.getElementById("alert").style.display = "block";
+          setTimeout(() => {
+            document.getElementById("alert").style.display = "none";
+          }, 2000);
+        })
+    }
+  </script>
 
 </body>
 
