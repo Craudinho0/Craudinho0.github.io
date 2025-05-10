@@ -577,3 +577,38 @@ body {
         width: 24px;
     }
 }
+
+/* Intermediate screens (notebooks e tablets grandes entre 769px e 1199px) */
+@media (min-width: 769px) and (max-width: 1199px) {
+    .card-style {
+        width: 85%;
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    .avatar {
+        width: 95px;
+    }
+
+    .style-name {
+        font-size: 24px;
+    }
+
+    .biography {
+        font-size: 15px;
+    }
+
+    .card {
+        width: 40%;
+        height: 32px;
+    }
+
+    .card img {
+        width: 21px;
+    }
+
+    .socials ul li a img, .dicord-animation {
+        width: 32px;
+        height: 32px;
+    }
+}
