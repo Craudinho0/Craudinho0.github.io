@@ -146,14 +146,17 @@ body {
 
 .card {
     display: flex;
-    width: 31%;
+    width: 90%;
+    max-width: 180px;
     height: 33px;
     text-align: center;
     margin: 5px auto;
     position: relative;
     justify-content: center;
+    align-items: center;
     border-radius: 7px;
     background: rgba(0, 0, 0, 0.801);
+    transition: all 0.3s ease;
 }
 
 .card img {
@@ -464,151 +467,28 @@ body {
     animation-delay: 2.5s
 }
 
-
-/* Small screens (phones up to 480px) */
-@media (max-width: 480px) {
-    /* Make card flexible and fit small screens */
-    .card-style {
-        width: 90%;
-        height: auto;
-        padding: 20px 10px;
-    }
-
-    /* Reduce avatar size for phones */
-    .avatar {
-        width: 80px;
-        margin: 10px;
-    }
-
-    /* Adjust name font size */
-    .style-name {
-        font-size: 20px;
-    }
-
-    /* Adjust biography text for smaller screens */
-    .biography {
-        font-size: 14px;
-        text-align: center;
-        padding: 0 10px;
-    }
-
-    /* Reduce spacing in social icons list */
-    .socials ul {
-        gap: 15px;
-        padding: 0 10px;
-    }
-
-    /* Resize social icons */
-    .socials ul li a img, .dicord-animation {
-        width: 30px;
-        height: 30px;
-    }
-
-    /* Resize skill cards */
-    .card {
-        width: 60%;
-        height: 30px;
-    }
-
-    /* Resize images inside cards */
-    .card img {
-        width: 18px;
-    }
-}
-
-/* Medium screens (tablets between 481px and 768px) */
+/* Telas médias (tablets) */
 @media (min-width: 481px) and (max-width: 768px) {
-    /* Slightly larger card for tablets */
-    .card-style {
-        width: 80%;
-        height: auto;
-        padding: 30px 15px;
-    }
-
-    /* Slightly larger avatar */
-    .avatar {
-        width: 90px;
-    }
-
-    /* Medium font size for name */
-    .style-name {
-        font-size: 22px;
-    }
-
-    /* Medium font size for biography */
-    .biography {
-        font-size: 15px;
-    }
-
-    /* Medium size for skill cards */
     .card {
         width: 45%;
-    }
-
-    .card img {
-        width: 20px;
+        max-width: none;
+        height: 32px;
     }
 }
 
-/* Large screens (desktops ≥ 1200px) */
-@media (min-width: 1200px) {
-    /* Expand card size on large displays */
-    .card-style {
-        width: 500px;
-        height: 450px;
-    }
-
-    /* Increase avatar size */
-    .avatar {
-        width: 110px;
-    }
-
-    /* Larger font for name */
-    .style-name {
-        font-size: 26px;
-    }
-
-    /* Slightly larger cards and icons */
-    .card {
-        width: 30%;
-    }
-
-    .card img {
-        width: 24px;
-    }
-}
-
-/* Intermediate screens (notebooks e tablets grandes entre 769px e 1199px) */
+/* Telas intermediárias (notebooks/tablets grandes) */
 @media (min-width: 769px) and (max-width: 1199px) {
-    .card-style {
-        width: 85%;
-        height: auto;
-        padding: 30px 20px;
-    }
-
-    .avatar {
-        width: 95px;
-    }
-
-    .style-name {
-        font-size: 24px;
-    }
-
-    .biography {
-        font-size: 15px;
-    }
-
     .card {
         width: 40%;
-        height: 32px;
+        max-width: none;
+        height: 33px;
     }
+}
 
-    .card img {
-        width: 21px;
-    }
-
-    .socials ul li a img, .dicord-animation {
-        width: 32px;
-        height: 32px;
+/* Telas grandes (desktops) */
+@media (min-width: 1200px) {
+    .card {
+        width: 30%;
+        max-width: 220px;
     }
 }
