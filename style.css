@@ -11,27 +11,28 @@ body {
   color: #fff;
 }
 
-.video-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Fica atrás de tudo */
+    pointer-events: none; /* Impede que cliques no vídeo atrapalhem o site */
+    overflow: hidden;
 }
 
-.video-bg iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100vw;
-  height: 56.25vw; /* 16:9 */
-  min-height: 100vh;
-  min-width: 177.77vh;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
+.video-background iframe {
+    width: 100vw;
+    height: 56.25vw; /* Proporção 16:9 */
+    min-height: 100vh;
+    min-width: 177.77vh; /* Proporção 16:9 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
 
 /* leve blur geral (ok) */
 .overlay {
