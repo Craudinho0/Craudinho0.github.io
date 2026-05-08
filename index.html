@@ -4,7 +4,7 @@
 
 
 
-  <!doctype html>
+<!doctype html>
 <html lang="EN">
 
 <head>
@@ -12,8 +12,7 @@
   <title>Andrezinho</title>
 
   <!-- Fonte -->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap">
 
   <!-- Favicon -->
   <link rel="icon" id="favicon" type="image/png">
@@ -28,7 +27,7 @@
 <body>
 
   <!-- Background video -->
-  <video autoplay loop muted id="bg-video">
+  <video autoplay loop muted playsinline preload="auto" id="bg-video">
     <source src="movies/fgwyvfwhubfwjfn.mp4" type="video/mp4">
   </video>
 
@@ -48,44 +47,42 @@
         <span>“different perspectives”</span>
       </p>
 
+      <div id="activity">
+        <span id="activity-text"></span>
+      </div>
+
       <div class="socials">
-        <a class="ig"
-          href="https://www.instagram.com/andrezinho_diiackers/#"
-          target="_blank"
-          rel="noopener noreferrer">
+
+        <a class="ig" href="https://www.instagram.com/andrezinho_diiackers/#" target="_blank" rel="noopener noreferrer"
+          data-tooltip="@andrezinho_diiackers">
           <i data-lucide="instagram"></i>
         </a>
 
-        <a class="yt"
-          href="https://www.youtube.com/@andrezinho7676?sub_confirmation=1"
-          target="_blank"
-          rel="noopener noreferrer">
+        <a class="yt" href="https://www.youtube.com/@andrezinho7676?sub_confirmation=1" target="_blank"
+          rel="noopener noreferrer" data-tooltip="@andrezinho7676">
           <i data-lucide="youtube"></i>
         </a>
 
-        <a class="tw"
-          href="https://twitter.com/intent/user?screen_name=andrealmei19851"
-          target="_blank"
-          rel="noopener noreferrer">
+        <a class="tw" href="https://twitter.com/intent/user?screen_name=andrealmei19851" target="_blank"
+          rel="noopener noreferrer" data-tooltip="@andrealmei19851">
           <i data-lucide="twitter"></i>
         </a>
 
-        <a class="gh"
-          href="https://github.com/Andrezinhoo0"
-          target="_blank"
-          rel="noopener noreferrer">
+        <a class="gh" href="https://github.com/Andrezinhoo0" target="_blank" rel="noopener noreferrer"
+          data-tooltip="@Andrezinhoo0">
           <i data-lucide="github"></i>
         </a>
 
-        <a class="twc"
-          href="https://www.twitch.tv/andrwezinho"
-          target="_blank"
-          rel="noopener noreferrer">
+        <a class="twc" href="https://www.twitch.tv/andrwezinho" target="_blank" rel="noopener noreferrer"
+          data-tooltip="@andrwezinho">
           <i data-lucide="twitch"></i>
         </a>
-      </div>
 
-    </div>
+        <a class="mail" href="mailto:seuemail@email.com" data-tooltip="myemail@email.com">
+          <i data-lucide="mail"></i>
+        </a>
+
+      </div>
   </main>
 
   <!-- Image modal -->
@@ -100,4 +97,5 @@
   <script src="script.js"></script>
 
 </body>
+
 </html>
